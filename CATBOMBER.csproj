@@ -81,14 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2D Platformer Controller\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\Controller2D.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\PlatformController.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\Player.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\2D Platformer Controller\Scripts\Ptak2Movement.cs" />
     <Compile Include="Assets\2D Platformer Controller\Scripts\PtakMovement.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\RaycastController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2D Platformer Controller\LICENSE.txt" />

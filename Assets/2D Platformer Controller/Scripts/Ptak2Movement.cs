@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Ptak2Movement : MonoBehaviour {
+public class Ptak2Movement : MonoBehaviour
+{
     private const float MoveValue = 0.07f;
     public GameObject ptak;
 
