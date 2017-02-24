@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Ptak2Movement : MonoBehaviour
+public class KOT_2_Movement : MonoBehaviour
 {
     private const float MoveValue = 0.07f;
     public GameObject ptak;
@@ -14,29 +14,30 @@ public class Ptak2Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             Vector3 newPosition = this.ptak.transform.position;
-            newPosition.x = newPosition.x + Ptak2Movement.MoveValue;
+            newPosition.x = newPosition.x + KOT_2_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 newPosition = this.ptak.transform.position;
-            newPosition.x = newPosition.x - Ptak2Movement.MoveValue;
+            newPosition.x = newPosition.x - KOT_2_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             Vector3 newPosition = this.ptak.transform.position;
-            newPosition.y = newPosition.y - Ptak2Movement.MoveValue;
+            newPosition.y = newPosition.y - KOT_2_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             Vector3 newPosition = this.ptak.transform.position;
-            newPosition.y = newPosition.y + Ptak2Movement.MoveValue;
+            newPosition.y = newPosition.y + KOT_2_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
         }
     }
 }
+
