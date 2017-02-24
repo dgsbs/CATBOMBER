@@ -9,6 +9,7 @@ public class KOT_2_Movement : MonoBehaviour
     void Start()
     {
         this.ptak = gameObject;
+        
     }
 
     // Update is called once per frame
