@@ -11,16 +11,32 @@ public class KOT_1_Movement : MonoBehaviour
 
     private float nextBombTime;
 
+    private float dicemntPooTimeStep = 3F;
+
+    private float dicemntPooTime;
+    private int pooConter;
+
+    private int maxPoo = 5;
+
     // Use this for initialization
     void Start()
     {
         this.ptak = gameObject;
         this.nextBombTime = 0;
+
+        this.dicemntPooTime = 0;
+        this.pooConter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.time > this.dicemntPooTime)
+        {
+            this.dicemntPooTime = Time.time + this.dicemntPooTimeStep;
+            this.pooConter = this.pooConter > 0 ? this.pooConter - 1 : 0;
+        }
+
         if (Input.GetKey(KeyCode.D))
         {
             Vector3 newPosition = this.ptak.transform.position;
@@ -52,8 +68,9 @@ public class KOT_1_Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            if (Time.time > this.nextBombTime)
+            if (Time.time > this.nextBombTime && this.pooConter < this.maxPoo)
             {
+                this.pooConter = this.pooConter + 1;
                 this.nextBombTime = Time.time + this.nextBombTimeSpan;
                 Instantiate(this.Bomb, transform.position, Quaternion.identity);
             }

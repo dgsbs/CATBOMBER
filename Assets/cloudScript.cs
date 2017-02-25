@@ -42,4 +42,12 @@ public class cloudScript : MonoBehaviour {
             this.gameObject.SetActive(false);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }
