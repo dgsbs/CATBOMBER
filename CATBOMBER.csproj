@@ -81,8 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2D Platformer Controller\Scripts\KOT_1_Movement.cs" />
-    <Compile Include="Assets\2D Platformer Controller\Scripts\KOT_2_Movement.cs" />
+    <Compile Include="Assets\KOT_1_Movement.cs" />
+    <Compile Include="Assets\KOT_2_Movement.cs" />
     <Compile Include="Assets\cloudScript.cs" />
     <Compile Include="Assets\pooScript.cs" />
   </ItemGroup>
