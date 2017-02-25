@@ -5,10 +5,17 @@ public class KOT_1_Movement : MonoBehaviour
     private const float MoveValue = 0.07f;
     public GameObject ptak;
 
+    public GameObject Bomb;
+
+    private float nextBombTimeSpan = 0.5f;
+
+    private float nextBombTime;
+
     // Use this for initialization
     void Start()
     {
         this.ptak = gameObject;
+        this.nextBombTime = 0;
     }
 
     // Update is called once per frame
@@ -37,6 +44,15 @@ public class KOT_1_Movement : MonoBehaviour
             Vector3 newPosition = this.ptak.transform.position;
             newPosition.y = newPosition.y + KOT_1_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (Time.time > this.nextBombTime)
+            {
+                this.nextBombTime = Time.time + this.nextBombTimeSpan;
+                Instantiate(this.Bomb, transform.position, Quaternion.identity);
+            }
         }
     }
 }
