@@ -74,6 +74,7 @@ public class KOT_1_Movement : MonoBehaviour
                 this.pooConter = this.pooConter + 1;
                 this.nextBombTime = Time.time + this.nextBombTimeSpan;
                 Instantiate(this.Bomb, transform.position, Quaternion.identity);
+                GetComponent<AudioSource>().Play();
             }
         }
     }
