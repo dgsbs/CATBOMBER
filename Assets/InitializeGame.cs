@@ -7,6 +7,7 @@ public class InitializeGame : MonoBehaviour {
     public GameObject Cat2;
     public GameObject Brick;
     public GameObject MainBackground;
+    public GameObject DestroyableBrick;
 
     // Use this for initialization
     void Start()
@@ -31,6 +32,14 @@ public class InitializeGame : MonoBehaviour {
                 else if ((i % 2 == 0) && (j % 2 == 0))
                 {
                     AddColideBlock(startPos, new Vector2(i * brickSize.x, j * brickSize.y));
+                }
+                else
+                {
+                    float rndNumber = Random.Range(0, numberOfColumns * numberOfRows);
+                    if (rndNumber % 6 == 0)
+                    {
+                        AddDestroyableBrick(startPos, new Vector2(i * brickSize.x, j * brickSize.y));
+                    }
                 }
             }
         }
@@ -67,6 +76,12 @@ public class InitializeGame : MonoBehaviour {
         Vector3 newPosition = new Vector3(startPos.x + size.x, startPos.y - size.y);
         GameObject newBrick = Instantiate(Brick, newPosition, Brick.transform.rotation);
         newBrick.AddComponent<BoxCollider2D>();
+    }
+
+    void AddDestroyableBrick(Vector3 startPos, Vector2 size)
+    {
+        Vector3 newPosition = new Vector3(startPos.x + size.x, startPos.y - size.y);
+        GameObject newBrick = Instantiate(DestroyableBrick, newPosition, DestroyableBrick.transform.rotation);
     }
 
     Vector2 GetScreenSize()
