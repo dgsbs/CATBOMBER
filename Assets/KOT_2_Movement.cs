@@ -69,11 +69,13 @@ public class KOT_2_Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Keypad0) || Input.GetKey(KeyCode.RightShift))
         {
-            if (Time.time > this.nextBombTime)
+            if (Time.time > this.nextBombTime && this.pooConter < this.maxPoo)
             {
+                this.pooConter = this.pooConter + 1;
                 this.nextBombTime = Time.time + this.nextBombTimeSpan;
                 Instantiate(this.Bomb, transform.position, Quaternion.identity);
             }
+
         }
     }
 }
