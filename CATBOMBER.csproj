@@ -81,6 +81,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GameOverScript.cs" />
     <Compile Include="Assets\InitializeGame.cs" />
     <Compile Include="Assets\KOT_1_Movement.cs" />
     <Compile Include="Assets\KOT_2_Movement.cs" />
