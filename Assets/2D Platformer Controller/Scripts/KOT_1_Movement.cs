@@ -26,24 +26,28 @@ public class KOT_1_Movement : MonoBehaviour
             Vector3 newPosition = this.ptak.transform.position;
             newPosition.x = newPosition.x + KOT_1_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
+            GetComponent<Animator>().Play("cat_white_right");
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             Vector3 newPosition = this.ptak.transform.position;
             newPosition.x = newPosition.x - KOT_1_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
+            GetComponent<Animator>().Play("cat_white_left");
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             Vector3 newPosition = this.ptak.transform.position;
             newPosition.y = newPosition.y - KOT_1_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
+            GetComponent<Animator>().Play("cat_white_down");
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
             Vector3 newPosition = this.ptak.transform.position;
             newPosition.y = newPosition.y + KOT_1_Movement.MoveValue;
             this.ptak.transform.position = newPosition;
+            GetComponent<Animator>().Play("cat_white_up");
         }
 
         if (Input.GetKey(KeyCode.Space))
